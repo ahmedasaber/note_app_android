@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    style="@style/SCREEN_BG"
+    tools:context="com.example.noteexample.MainActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
+
+    <android.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="10dp"
+        android:theme="@style/SEARCH"
+        android:queryHint="Search"
+        android:queryBackground="@android:color/transparent"
+        android:background="@drawable/search_bar"
+        android:iconifiedByDefault="false"
+        android:searchIcon="@drawable/search_24"
+        android:closeIcon="@drawable/clear_24"
+        android:layout_alignParentTop="true" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerviewID"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginBottom="5dp"
+            tools:listitem="@layout/note_content"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2"/>
+
+        <TextView
+            android:id="@+id/empty_notesID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:text="No notes found!"
+            android:layout_centerHorizontal="true"
+            android:textColor="#CACFD2"
+            android:textSize="26sp" />
+
+        <include layout="@layout/floating_button"/>
+    </RelativeLayout>
+</LinearLayout>

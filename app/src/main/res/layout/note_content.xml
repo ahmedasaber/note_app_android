@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_parent_id"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:layout_margin="5dp"
+    style="@style/RC_item"
+    android:foreground="?selectableItemBackground"
+    android:clickable="true">
+
+
+
+    <TextView
+        android:id="@+id/title_id"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/note_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_id"
+        android:textColor="@color/white"
+        android:ellipsize="end"
+        android:maxLines="5"
+        android:textSize="14sp" />
+
+    <!--android:layout_below="@id/title_id"
+        android:layout_toRightOf="@id/dot_id"-->
+</RelativeLayout>
